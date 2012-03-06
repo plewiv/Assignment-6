@@ -5,9 +5,15 @@ rails new Assignment6
 #create new rails project
 
 changed Gemfile to:
+<<<<<<< HEAD
 	source 'http://rubygems.org'
 	gem 'rails', '3.0.11'
 	gem 'sqlite3', '1.3.3'
+=======
+	source 'http://rubygems.org'
+	gem 'rails', '3.0.11'
+	gem 'sqlite3', '1.3.3'
+>>>>>>> deea65184441a52651116938ae6e0a188ad83070
 
 	group :development do
 	gem 'rspec-rails', '2.6.1'
