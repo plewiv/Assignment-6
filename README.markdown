@@ -19,18 +19,18 @@ changed Gemfile to:
 	end
 	
 rails generate controller throw player_throw
-#creates controller for throwing rock, paper, or scissors
-#Edited route.rb to match 'throw/:type' => 'throw#player_throw'
-#added code for throw_controller to play rock paper scissors
+//creates controller for throwing rock, paper, or scissors
+//Edited route.rb to match 'throw/:type' => 'throw#player_throw'
+//added code for throw_controller to play rock paper scissors
 
 rails generate controller stats stats
-#creates controller for stats
-#Implemented sessions by first initializing on first filter then removing the
-#intialization afterwards
-#Edited route.rb to match 'stats/stats' => 'stats#stats'
-#added code to throw_controller to implement stats
+//creates controller for stats
+//Implemented sessions by first initializing on first filter then removing the
+//intialization afterwards
+//Edited route.rb to match 'stats/stats' => 'stats#stats'
+//added code to throw_controller to implement stats
 
 rails generate controller clear clear
-#creates controller for clear
-#Implemented clearing stats
-#Edited route.rb to match "clear/clear" => 'clear#clear'
+//creates controller for clear
+//Implemented clearing stats
+//Edited route.rb to match "clear/clear" => 'clear#clear'
