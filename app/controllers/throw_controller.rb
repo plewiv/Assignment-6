@@ -3,16 +3,10 @@ before_filter do
 	@defeat = {rock: :scissors, paper: :rock, scissors: :paper}
     @throws = @defeat.keys
 	@computer_throw = @throws.sample
-	
+	session[:win]||=0
+	session[:loss]||=0
+	session[:tie]||=0
 end
-before_filter :test
-skip_before_filter :test
- 
-def test
-	session[:win] = 0
-	session[:loss] = 0
-	session[:tie] = 0
-end	
   def player_throw
 	@player_throw = params[:type].to_sym
 	if !@throws.include?(@player_throw)
@@ -20,13 +14,13 @@ end
 	end
 	if @player_throw == @computer_throw
 		session[:tie] += 1
-		@message = "No one is a winner :( TIED!"
+		@message = "Tied"
 	elsif @computer_throw == @defeat[@player_throw]
 		session[:win] += 1
-		@message = "You win! Like a BAWS!"
+		@message = "You win!"
 	else
 		session[:loss] += 1		
-		@message = "YOU LOSE SUCKA!"
+		@message = "You lose!"
 	end
   end
 
