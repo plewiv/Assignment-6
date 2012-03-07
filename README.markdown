@@ -1,6 +1,8 @@
 ROCK PAPER SCISSORS APP
 BY PETER LEW
 
+Depolyed to Heroku: http://fierce-wind-6148.heroku.com/
+
 rails new Assignment6
 
 changed Gemfile to
