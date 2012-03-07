@@ -5,6 +5,14 @@ before_filter do
 	@computer_throw = @throws.sample
 	
 end
+before_filter :test
+skip_before_filter :test
+ 
+def test
+	session[:win] = 0
+	session[:loss] = 0
+	session[:tie] = 0
+end	
   def player_throw
 	@player_throw = params[:type].to_sym
 	if !@throws.include?(@player_throw)
